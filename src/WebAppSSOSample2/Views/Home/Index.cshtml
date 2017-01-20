@@ -2,12 +2,9 @@
     ViewData["Title"] = "Home Page";
 }
 
-@using Stormpath.SDK.Application
-@inject IApplication stormpathApplication
-
 <div class="panel panel-default home-panel">
     <span>You are logged in WebAppSSOSample2!</span>
 </div>
-<a class="btn btn-default btn-lg btn-primary pull-right" href="@stormpathApplication.NewIdSiteUrlBuilder().SetCallbackUri("http://localhost:54919/").Build()">
+<a class="btn btn-default btn-lg btn-primary pull-right" asp-action="SwitchApplication">
     Go to WebAppSSOSample1
 </a>
